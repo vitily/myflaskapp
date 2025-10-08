@@ -16,11 +16,7 @@ pipeline {
                 """
             }
         }
-        stage('Checkout') {
-            steps {
-                git url: 'git@github.com:vitily/myflaskapp.git', branch: 'main'
-            }
-        }
+        
         stage('Fix pip') {
             steps {
                 bat """
